@@ -8,7 +8,7 @@ const countrySchema = new Schema({
   population: { type: Number, default: 0 },
   ethnicity: String,
   neighbouring_countires: [{ type: Schema.Types.ObjectId, ref: "Country" }],
-  area: String,
+  area: { type: Number, default: 0 },
 });
 
 module.exports = mongoose.model("Country", countrySchema);
