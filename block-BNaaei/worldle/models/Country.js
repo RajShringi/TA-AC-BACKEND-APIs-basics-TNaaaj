@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 const countrySchema = new Schema({
   name: { type: String, required: true },
   states: [{ type: Schema.Types.ObjectId, ref: "State" }],
-  continent: String,
+  continent: { type: String },
   population: { type: Number, default: 0 },
-  ethnicity: String,
+  ethnicity: { type: String },
   neighbouring_countires: [{ type: Schema.Types.ObjectId, ref: "Country" }],
   area: { type: Number, default: 0 },
 });
